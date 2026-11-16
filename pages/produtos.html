@@ -1,1 +1,185 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produtos | Pastelaria da Marli</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <img
+                    src="img/Login.png"
+                    alt="Logo da Pastelaria da Marli"
+                    class="logo"
+                >
+            </div>
+
+            <nav class="menu">
+
+                <a href="index.html">Início</a>
+
+                <a href="novo-pedido.html">Novo Pedido</a>
+
+                <a href="cozinha.html">Pedidos da Cozinha</a>
+
+                <a href="produtos.html" class="ativo">Produtos</a>
+
+                <a href="login.html" id="sair">Sair</a>
+
+            </nav>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main">
+
+            <header class="topo">
+
+                <div>
+                    <h1>Produtos</h1>
+                    <p>Gerencie os produtos da pastelaria.</p>
+                </div>
+
+                <button id="adicionar" class="botao-adicionar">
+                    + Adicionar Produto
+                </button>
+
+            </header>
+
+            <!-- PESQUISA -->
+            <section class="area-pesquisa">
+
+                <input
+                    type="text"
+                    id="busca"
+                    placeholder="Pesquisar produto..."
+                >
+
+            </section>
+
+            <!-- LISTA DE PRODUTOS -->
+            <section class="grade-produtos" id="grade-produtos">
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JANELA DE CADASTRO E EDIÇÃO -->
+    <dialog id="dialogo-produto" class="dialogo">
+
+        <div class="dialogo-cabecalho">
+
+            <h2>Cadastro de Produto</h2>
+
+            <button
+                type="button"
+                id="fechar"
+                class="botao-fechar"
+            >
+                X
+            </button>
+
+        </div>
+
+        <form id="form-produto">
+
+            <input
+                type="hidden"
+                id="id-produto"
+            >
+
+            <div class="campo">
+
+                <label for="nome-produto">
+                    Nome do produto
+                </label>
+
+                <input
+                    type="text"
+                    id="nome-produto"
+                    placeholder="Ex: Pastel de carne"
+                    required
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="preco-produto">
+                    Preço (R$)
+                </label>
+
+                <input
+                    type="number"
+                    id="preco-produto"
+                    placeholder="Ex: 10.00"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+            <div class="campo">
+
+                <label for="imagem-produto">
+                    Imagem do produto
+                </label>
+
+                <input
+                    type="file"
+                    id="imagem-produto"
+                    accept="image/*"
+                >
+
+                <small>
+                    Selecione uma foto do produto no seu computador.
+                </small>
+
+            </div>
+
+            <div class="botoes-formulario">
+
+                <button
+                    type="button"
+                    id="cancelar"
+                    class="botao-cancelar"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="botao-salvar"
+                >
+                    Salvar Produto
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <!-- ARQUIVOS JAVASCRIPT -->
+    <script src="dados.js"></script>
+    <script src="menu.js"></script>
+    <script src="produtos.js"></script>
+
+</body>
+</html>
+
