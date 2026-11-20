@@ -1,0 +1,251 @@
+
+/* ========================================
+   PÁGINA DE LOGIN
+   Complementa o style.css (cores, fonte, .campo, .logo, .botao-adicionar)
+   ======================================== */
+
+.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* CARTÃO PRINCIPAL */
+
+.login {
+    display: flex;
+    width: 100%;
+    max-width: 880px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(75, 36, 36, 0.15);
+}
+
+/* LADO DA MARCA */
+
+.login-marca {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 30px;
+    background-color: #4b2424;
+    color: white;
+}
+
+.login-marca .brand {
+    margin-bottom: 25px;
+}
+
+.login-marca .logo {
+    width: 160px;
+    height: 160px;
+}
+
+.login-marca h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.login-marca p {
+    font-size: 15px;
+    color: #f3d9c3;
+}
+
+/* LADO DO FORMULÁRIO */
+
+.login-formulario {
+    flex: 1;
+    padding: 45px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-cabecalho {
+    margin-bottom: 28px;
+}
+
+.login-cabecalho h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.login-cabecalho p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* CAMPOS */
+
+.login .campo {
+    margin-bottom: 18px;
+}
+
+.login .campo input {
+    padding: 13px 14px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.login .campo input:focus {
+    box-shadow: 0 0 0 3px rgba(233, 121, 37, 0.18);
+}
+
+.login .campo input.invalido {
+    border-color: #d93636;
+    background-color: #fff8f8;
+}
+
+.login .campo input.invalido:focus {
+    box-shadow: 0 0 0 3px rgba(217, 54, 54, 0.15);
+}
+
+/* MENSAGEM DE ERRO DO CAMPO */
+
+.mensagem-erro {
+    color: #d93636;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.mensagem-erro:empty {
+    display: none;
+}
+
+/* CAMPO DE SENHA COM BOTÃO MOSTRAR */
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 85px;
+}
+
+.botao-mostrar-senha {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #d96a1c;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-mostrar-senha:hover {
+    background-color: #fff0e3;
+}
+
+.botao-mostrar-senha:focus-visible {
+    outline: 2px solid #e97925;
+}
+
+/* MENSAGEM GERAL (topo do formulário) */
+
+.mensagem-geral {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.mensagem-geral[hidden] {
+    display: none;
+}
+
+.mensagem-geral.erro {
+    background-color: #ffe7e7;
+    color: #b32b2b;
+}
+
+.mensagem-geral.sucesso {
+    background-color: #fff0e3;
+    color: #8a4310;
+}
+
+/* AVISO DE DEMONSTRAÇÃO */
+
+.login-aviso {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #888;
+    text-align: center;
+}
+
+/* BOTÃO ENTRAR */
+
+.botao-entrar {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px 20px;
+    font-size: 15px;
+}
+
+.botao-entrar:focus-visible {
+    outline: 3px solid rgba(233, 121, 37, 0.4);
+    outline-offset: 2px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .pagina-login {
+        padding: 16px;
+        align-items: flex-start;
+    }
+
+    .login {
+        flex-direction: column;
+        max-width: 460px;
+    }
+
+    .login-marca {
+        padding: 25px 20px;
+    }
+
+    .login-marca .brand {
+        margin-bottom: 12px;
+    }
+
+    .login-marca .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .login-marca h2 {
+        font-size: 19px;
+        margin-bottom: 4px;
+    }
+
+    .login-marca p {
+        font-size: 13px;
+    }
+
+    .login-formulario {
+        padding: 28px 22px 32px;
+    }
+
+    .login-cabecalho {
+        margin-bottom: 22px;
+    }
+
+    .login-cabecalho h1 {
+        font-size: 24px;
+    }
+}
